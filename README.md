@@ -1,7 +1,7 @@
 # Inji Interoperability Playground
 
 **A Unified Sandbox for Verifiable Credential Interoperability Testing**  
-*MOSIP Decode 2026 — Problem Statement 2*
+*MOSIP Decode 2026*
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
@@ -25,16 +25,7 @@ It provides a unified, interactive dashboard to test, inspect, and validate conf
 
 ---
 
-## 🎯 2. Problem Statement (MOSIP Decode 2026 – PS2)
-
-In decentralized digital identity ecosystems, interoperability between different issuers, digital identity wallets, and relying party verifiers is critical. However, developers and system integrators face significant hurdles:
-- **Protocol Disparities**: Testing across OpenID4VCI (issuance) and OpenID4VP (presentation/verification) specifications often requires running multiple disparate services with proprietary configurations.
-- **Format Incompatibilities**: Verifying W3C JSON-LD versus IETF SD-JWT formats requires distinct signature validation algorithms and key schemas.
-- **Opaque Debugging**: When an issuance or verification handshake fails (e.g., token signature errors, proof-of-possession mismatches, or schema discrepancies), diagnosing the exact failure point is complex and time-consuming.
-
----
-
-## 💡 3. Proposed Solution
+## 💡 2. Proposed Solution
 
 The **Inji Interoperability Playground** provides an automated, visual, and rigorous testing framework:
 1. **End-to-End Orchestration**: Automatically runs the full 8-stage issuance-to-verification lifecycle.
@@ -45,7 +36,7 @@ The **Inji Interoperability Playground** provides an automated, visual, and rigo
 
 ---
 
-## ✨ 4. Key Features
+## ✨ 3. Key Features
 
 - **8-Stage Conformance Protocol**: Full support for OpenID4VCI Draft 13 / Final and OpenID4VP draft specifications.
 - **Live Interaction Flow**: Visual sequence dashboard mapping HTTP interactions and protocol states across actors.
@@ -56,7 +47,7 @@ The **Inji Interoperability Playground** provides an automated, visual, and rigo
 
 ---
 
-## 🛠️ 5. Technology Stack
+## 🛠️ 4. Technology Stack
 
 - **Frontend**:
   - React 18 with TypeScript 5.6
@@ -75,7 +66,7 @@ The **Inji Interoperability Playground** provides an automated, visual, and rigo
 
 ---
 
-## 🏛️ 6. System Architecture
+## 🏛️ 5. System Architecture
 
 ```
                   ┌──────────────────────────────────────────┐
@@ -111,7 +102,7 @@ The **Inji Interoperability Playground** provides an automated, visual, and rigo
 
 ---
 
-## 📁 7. Project Directory Structure
+## 📁 6. Project Directory Structure
 
 ```
 mosip-inji-playground/
@@ -158,7 +149,7 @@ mosip-inji-playground/
 
 ---
 
-## ⚙️ 8. Prerequisites
+## ⚙️ 7. Prerequisites
 
 - **Docker Desktop**: v24+ (with Docker Compose v2)
 - **Node.js**: v18.0+ (tested on Node 20 / 22)
@@ -167,7 +158,7 @@ mosip-inji-playground/
 
 ---
 
-## 🚀 9. Installation Instructions
+## 🚀 8. Installation Instructions
 
 ### 1. Clone the Repository
 ```bash
@@ -182,7 +173,7 @@ cp .env.example .env
 
 ---
 
-## 🔧 10. Configuration & Environment Variables
+## 🔧 9. Configuration & Environment Variables
 
 Key parameters configured in `.env`:
 
@@ -205,7 +196,7 @@ ISSUER_DID_URL=https://<your-subdomain>.ngrok-free.dev/.well-known/did.json
 
 ---
 
-## 💻 11. How to Run Frontend & Backend
+## 💻 10. How to Run Frontend & Backend
 
 ### Option A: Using Docker (Recommended)
 
@@ -241,7 +232,7 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
-## 🔗 12. Integration with Inji Certify, Inji Verify & Mimoto
+## 🔗 11. Integration with Inji Certify, Inji Verify & Mimoto
 
 The playground communicates with live Inji services using standard REST interfaces:
 - **Inji Certify (`:8090` / `:8091`)**: Resolves issuer metadata, fetches public DID documents via `/.well-known/did.json`, and issues credentials through `/v1/certify/issuance/credential`.
@@ -251,7 +242,7 @@ The playground communicates with live Inji services using standard REST interfac
 
 ---
 
-## 📖 13. API Documentation Reference
+## 📖 12. API Documentation Reference
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -265,7 +256,7 @@ The playground communicates with live Inji services using standard REST interfac
 
 ---
 
-## 🧪 14. Testing Instructions
+## 🧪 13. Testing Instructions
 
 Run backend unit and integration tests:
 ```bash
@@ -281,7 +272,7 @@ npm run build
 
 ---
 
-## 🔒 15. Security Considerations
+## 🔒 14. Security Considerations
 
 - **Real Cryptographic Verification**: The sandbox verifies real signatures and does not bypass cryptographic validation.
 - **DID Document Resolution**: Uses standard `did:web` resolution with TLS verification.
@@ -290,7 +281,7 @@ npm run build
 
 ---
 
-## 🔮 16. Future Enhancements
+## 🔮 15. Future Enhancements
 
 - [ ] Support for **mDoc / ISO 18013-5** mobile driving license format.
 - [ ] Automated CI/CD interoperability regression test suite.
@@ -299,10 +290,9 @@ npm run build
 
 ---
 
-## 👥 17. Team & Acknowledgements
+## 👥 16. Team & Acknowledgements
 
 - **Event**: MOSIP Decode 2026 Hackathon
-- **Problem Statement**: Problem Statement 2 – Verifiable Credential Interoperability
 - **Developed by**: Inji Interop Playground Team
 - **Acknowledgements**: Special thanks to the **MOSIP Community** and the **Inji Open Source Project** maintainers.
 
