@@ -281,17 +281,7 @@ npm run build
 
 ---
 
-## 🖼️ 15. Screenshots & Demo
-
-| Feature | Preview |
-|---|---|
-| **Main Protocol Workspace** | ![Main Dashboard Placeholder](docs/screenshots/dashboard.png) |
-| **Live Interaction Flow** | ![Sequence Flow Placeholder](docs/screenshots/sequence_flow.png) |
-| **Protocol Inspector & Audit** | ![Inspector Placeholder](docs/screenshots/inspector.png) |
-
----
-
-## 🔒 16. Security Considerations
+## 🔒 15. Security Considerations
 
 - **Real Cryptographic Verification**: The sandbox verifies real signatures and does not bypass cryptographic validation.
 - **DID Document Resolution**: Uses standard `did:web` resolution with TLS verification.
@@ -300,7 +290,7 @@ npm run build
 
 ---
 
-## 🔮 17. Future Enhancements
+## 🔮 16. Future Enhancements
 
 - [ ] Support for **mDoc / ISO 18013-5** mobile driving license format.
 - [ ] Automated CI/CD interoperability regression test suite.
@@ -309,7 +299,7 @@ npm run build
 
 ---
 
-## 👥 18. Team & Acknowledgements
+## 👥 17. Team & Acknowledgements
 
 - **Event**: MOSIP Decode 2026 Hackathon
 - **Problem Statement**: Problem Statement 2 – Verifiable Credential Interoperability
