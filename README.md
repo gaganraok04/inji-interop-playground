@@ -209,26 +209,49 @@ docker compose -f docker/docker-compose.yml up -d --build
 
 ### Option B: Local Development Mode
 
-**1. Run Backend:**
+#### 1. Run Backend (Python / Flask)
+
+Navigate to the `backend` directory and create a virtual environment:
+
 ```bash
 cd backend
 python -m venv venv
-# Windows:
-.\venv\Scripts\activate
-# Linux/macOS:
-source venv/bin/activate
+```
 
+Activate the virtual environment:
+
+- **Windows (PowerShell / Command Prompt):**
+  ```powershell
+  .\venv\Scripts\activate
+  ```
+
+- **Linux / macOS:**
+  ```bash
+  source venv/bin/activate
+  ```
+
+Install Python dependencies and start the server:
+
+```bash
 pip install -r requirements.txt
 python run.py
 ```
 
-**2. Run Frontend:**
+Verify backend health at: **`http://127.0.0.1:5000/api/health`**
+
+<br />
+
+#### 2. Run Frontend (React / Vite)
+
+In a separate terminal, navigate to the `frontend` directory:
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Open `http://localhost:5173` in your browser.
+
+Open your browser to: **`http://localhost:5173`**
 
 ---
 
